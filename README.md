@@ -6,7 +6,7 @@ This project is a static starter website for Nuts & Bolts Investing.
 
 - Multi-page marketing site
 - Homepage focused on email capture and beginner trust-building
-- Supporting pages for About, Course, Resources, Newsletter, Contact, Privacy, and Terms
+- Supporting pages for About, Course, Resources, Mailing List, Contact, Privacy, and Terms
 - Shared styles and a mobile menu
 - Brand palette and layout direction based on the logo
 
@@ -16,7 +16,7 @@ This project is a static starter website for Nuts & Bolts Investing.
 - `about.html`
 - `course.html`
 - `resources.html`
-- `newsletter.html`
+- `mailing-list.html`
 - `contact.html`
 - `privacy.html`
 - `terms.html`
@@ -126,7 +126,7 @@ That makes it easier to grow into a larger site or move to a framework later.
 ## Suggested next build steps
 
 1. Refine the homepage copy with your voice.
-2. Connect the newsletter form.
+2. Connect the mailing list form.
 3. Add a real free lead magnet.
 4. Replace placeholder legal pages.
 5. Add a custom domain.

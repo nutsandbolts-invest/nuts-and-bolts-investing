@@ -23,7 +23,7 @@ Start with these pages:
 - About
 - Beginner Course
 - Free Resources
-- Newsletter
+- Mailing List
 - Contact
 - Privacy Policy
 - Terms
@@ -89,7 +89,7 @@ Examples:
 - Starter glossary
 - Simple first-investment roadmap
 
-### Newsletter
+### Mailing List
 
 Purpose:
 Turn casual visitors into long-term subscribers.
@@ -320,7 +320,7 @@ Create these first:
 
 - A strong homepage
 - A simple About page
-- A newsletter signup offer
+- A mailing list signup offer
 - One free beginner resource
 - A course page or waitlist page
 

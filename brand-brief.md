@@ -18,7 +18,7 @@ The goal is to help complete beginners start investing simply and confidently.
 
 - Paid beginner investing course
 - Membership
-- Newsletter
+- Mailing list
 - Affiliate recommendations
 - Templates
 - Sponsorships
