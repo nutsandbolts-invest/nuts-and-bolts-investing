@@ -271,7 +271,8 @@ a {
 }
 
 .hero-points,
-.check-list {
+.check-list,
+.offer-list {
   list-style: none;
   padding: 0;
   margin: 1.6rem 0 0;
@@ -283,14 +284,16 @@ a {
 }
 
 .hero-points li,
-.check-list li {
+.check-list li,
+.offer-list li {
   position: relative;
   padding-left: 1.5rem;
   color: var(--muted);
 }
 
 .hero-points li::before,
-.check-list li::before {
+.check-list li::before,
+.offer-list li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -418,6 +421,65 @@ a {
 .footer-copy,
 .legal-copy {
   color: var(--muted);
+}
+
+.offer-box {
+  background:
+    radial-gradient(circle at top right, rgba(142, 205, 168, 0.16), transparent 16rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+}
+
+.offer-intro {
+  max-width: 34rem;
+}
+
+.price-block {
+  display: inline-grid;
+  gap: 0.15rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(144, 212, 171, 0.26);
+  border-radius: 1.25rem;
+  background: rgba(10, 18, 36, 0.32);
+}
+
+.price-label {
+  margin: 0;
+  color: var(--mint);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.price-value,
+.course-price {
+  margin: 0;
+  color: var(--ivory);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(2.8rem, 5vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.price-vat {
+  margin: 0;
+  font-size: 0.84rem;
+  color: rgba(236, 240, 246, 0.72);
+}
+
+.offer-list {
+  display: grid;
+  gap: 0.72rem;
+  margin-bottom: 1.6rem;
+}
+
+.offer-side-card {
+  align-self: start;
+  background:
+    radial-gradient(circle at top right, rgba(142, 205, 168, 0.14), transparent 12rem),
+    rgba(255, 255, 255, 0.04);
 }
 
 .panel-note {
