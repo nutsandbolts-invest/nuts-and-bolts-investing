@@ -107,8 +107,31 @@ a {
 }
 
 .brand {
-  width: clamp(11rem, 18vw, 15rem);
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
+}
+
+.brand-lockup {
+  display: grid;
+  gap: 0.18rem;
+  line-height: 1;
+}
+
+.brand-title {
+  color: var(--ivory);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.brand-subtitle {
+  color: var(--mint);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  padding-left: 0.12rem;
 }
 
 .site-nav {
@@ -270,6 +293,44 @@ a {
 .stacked-cards {
   display: grid;
   gap: 1rem;
+}
+
+.brand-plate {
+  position: relative;
+  padding: 1.1rem;
+  border-radius: calc(var(--radius) + 0.5rem);
+  background:
+    radial-gradient(circle at top right, rgba(142, 205, 168, 0.14), transparent 12rem),
+    rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(144, 212, 171, 0.18);
+  box-shadow: var(--shadow);
+}
+
+.brand-plate::before,
+.brand-plate::after {
+  content: "";
+  position: absolute;
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 2px solid var(--mint);
+  border-radius: 0.2rem;
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+.brand-plate::before {
+  top: 1rem;
+  left: 1rem;
+}
+
+.brand-plate::after {
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.brand-plate-image {
+  width: 100%;
+  border-radius: calc(var(--radius) - 0.5rem);
 }
 
 .panel-card,
@@ -593,7 +654,7 @@ a {
   }
 
   .brand {
-    width: 10.5rem;
+    max-width: 12rem;
   }
 
   .panel-card,
