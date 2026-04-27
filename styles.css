@@ -434,23 +434,16 @@ a {
 }
 
 .price-block {
-  display: inline-grid;
-  gap: 0.15rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 0.8rem;
   margin-bottom: 1rem;
   padding: 1rem 1.15rem;
   border: 1px solid rgba(144, 212, 171, 0.26);
   border-radius: 1.25rem;
   background: rgba(10, 18, 36, 0.32);
-}
-
-.price-label {
-  margin: 0;
-  color: var(--mint);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .price-value,
@@ -463,10 +456,33 @@ a {
   letter-spacing: -0.04em;
 }
 
-.price-vat {
-  margin: 0;
-  font-size: 0.84rem;
-  color: rgba(236, 240, 246, 0.72);
+.launch-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 7rem;
+  height: 7rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffffff 0%, #f1ebff 42%, #8b5cf6 100%);
+  color: #5b31c6;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 18px 36px rgba(78, 43, 170, 0.26);
+  text-align: center;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.launch-badge span {
+  display: block;
+  font-size: 0.78rem;
+}
+
+.launch-badge-side {
+  margin-bottom: 1rem;
 }
 
 .offer-list {
@@ -480,16 +496,6 @@ a {
   background:
     radial-gradient(circle at top right, rgba(142, 205, 168, 0.14), transparent 12rem),
     rgba(255, 255, 255, 0.04);
-}
-
-.panel-note {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.15rem 1.3rem;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(144, 212, 171, 0.16);
 }
 
 .note-mark,
@@ -715,6 +721,10 @@ a {
 
   .footer-links {
     justify-content: flex-start;
+  }
+
+  .price-block {
+    align-items: flex-start;
   }
 }
 
