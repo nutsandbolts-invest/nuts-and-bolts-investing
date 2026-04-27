@@ -434,16 +434,23 @@ a {
 }
 
 .price-block {
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.8rem;
+  margin-top: 1.4rem;
   margin-bottom: 1rem;
-  padding: 1rem 1.15rem;
+  padding: 2rem 1.15rem 1rem;
   border: 1px solid rgba(144, 212, 171, 0.26);
   border-radius: 1.25rem;
   background: rgba(10, 18, 36, 0.32);
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
 }
 
 .price-value,
@@ -456,7 +463,20 @@ a {
   letter-spacing: -0.04em;
 }
 
+.price-was {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(255, 255, 255, 0.85);
+}
+
 .launch-badge {
+  position: absolute;
+  top: -2.6rem;
+  right: -1.25rem;
   display: inline-grid;
   place-items: center;
   width: 7rem;
@@ -474,6 +494,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   flex-shrink: 0;
+  transform: rotate(10deg);
 }
 
 .launch-badge span {
@@ -482,7 +503,8 @@ a {
 }
 
 .launch-badge-side {
-  margin-bottom: 1rem;
+  top: -2.75rem;
+  right: -1rem;
 }
 
 .offer-list {
@@ -492,10 +514,12 @@ a {
 }
 
 .offer-side-card {
+  position: relative;
   align-self: start;
   background:
     radial-gradient(circle at top right, rgba(142, 205, 168, 0.14), transparent 12rem),
     rgba(255, 255, 255, 0.04);
+  padding-top: 4.5rem;
 }
 
 .note-mark,
@@ -725,6 +749,11 @@ a {
 
   .price-block {
     align-items: flex-start;
+    padding-top: 4.25rem;
+  }
+
+  .launch-badge {
+    right: 0.75rem;
   }
 }
 
