@@ -592,6 +592,30 @@ a {
   align-items: start;
 }
 
+.mailing-layout {
+  align-items: stretch;
+}
+
+.mailing-info-card,
+.mailing-form-card {
+  height: 100%;
+}
+
+.mailing-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mailing-form-card {
+  display: flex;
+  align-items: center;
+}
+
+.mailing-form-card .formkit-form {
+  width: 100% !important;
+}
+
 .section-heading {
   display: grid;
   gap: 0.5rem;
@@ -630,6 +654,14 @@ a {
   border: 1px solid rgba(144, 212, 171, 0.16);
 }
 
+.kit-form-embed {
+  align-content: start;
+}
+
+.kit-form-embed script {
+  display: block;
+}
+
 .signup-form label {
   font-size: 0.95rem;
   color: var(--ivory);
@@ -655,6 +687,75 @@ a {
 .signup-form textarea:focus {
   outline: 2px solid rgba(142, 205, 168, 0.5);
   outline-offset: 1px;
+}
+
+.kit-form-embed .formkit-form {
+  max-width: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.kit-form-embed .formkit-fields {
+  display: grid !important;
+  gap: 0.75rem !important;
+}
+
+.kit-form-embed .formkit-field,
+.kit-form-embed .formkit-input-group {
+  width: 100% !important;
+}
+
+.kit-form-embed .formkit-input,
+.kit-form-embed input[type="text"],
+.kit-form-embed input[type="email"] {
+  width: 100% !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: var(--text) !important;
+  padding: 0.95rem 1rem !important;
+  font: inherit !important;
+  box-sizing: border-box !important;
+}
+
+.kit-form-embed .formkit-input::placeholder,
+.kit-form-embed input::placeholder {
+  color: rgba(236, 240, 246, 0.5) !important;
+}
+
+.kit-form-embed .formkit-submit,
+.kit-form-embed button[type="submit"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 3.35rem !important;
+  padding: 0.85rem 1.35rem !important;
+  border-radius: 999px !important;
+  border: 1px solid transparent !important;
+  background: var(--mint) !important;
+  color: #13263b !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+.kit-form-embed .formkit-submit:hover,
+.kit-form-embed button[type="submit"]:hover {
+  transform: translateY(-1px);
+}
+
+.kit-form-embed .formkit-alert,
+.kit-form-embed .formkit-powered-by-convertkit-container,
+.kit-form-embed .formkit-disclaimer {
+  color: var(--muted) !important;
+  font-size: 0.92rem !important;
+}
+
+.kit-form-embed label {
+  color: var(--ivory) !important;
+  font-size: 0.95rem !important;
 }
 
 .form-note {
