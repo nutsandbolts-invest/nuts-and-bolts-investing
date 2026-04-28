@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Investing Glossary | Nuts &amp; Bolts Investing</title>
+    <style>
+      :root {
+        --navy: #20274d;
+        --navy-soft: #293260;
+        --mint: #8ecda8;
+        --mint-deep: #6fb28b;
+        --ivory: #f4eddc;
+        --text: #17213b;
+        --muted: #516078;
+        --line: #d9e5dc;
+        --paper: #fffdf7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        background: #e9edf4;
+        color: var(--text);
+        font-family: "Avenir Next", Montserrat, "Segoe UI", Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      .page {
+        min-height: 297mm;
+        padding: 18mm;
+        background: var(--paper);
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .cover {
+        display: grid;
+        align-content: space-between;
+        background:
+          radial-gradient(circle at 88% 16%, rgba(142, 205, 168, 0.22), transparent 38mm),
+          linear-gradient(160deg, #242b53 0%, #1f274e 100%);
+        color: var(--ivory);
+      }
+
+      .brand-title {
+        color: var(--ivory);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 24pt;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .brand-subtitle {
+        color: var(--mint);
+        display: block;
+        margin-top: 2mm;
+        font-size: 8pt;
+        font-weight: 800;
+        letter-spacing: 0.36em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        margin: 0 0 5mm;
+        color: var(--mint-deep);
+        font-size: 8pt;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .cover .eyebrow {
+        color: var(--mint);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        max-width: 150mm;
+        font-size: 44pt;
+      }
+
+      h2 {
+        color: var(--navy);
+        font-size: 25pt;
+      }
+
+      h3 {
+        color: var(--navy);
+        font-size: 13pt;
+      }
+
+      p {
+        color: var(--muted);
+      }
+
+      .cover p {
+        max-width: 145mm;
+        color: rgba(244, 237, 220, 0.86);
+        font-size: 14pt;
+      }
+
+      .intro {
+        padding: 7mm;
+        border: 1px solid rgba(142, 205, 168, 0.34);
+        border-radius: 6mm;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .page-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        margin-bottom: 9mm;
+        padding-bottom: 7mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .mini-brand {
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 13pt;
+        font-weight: 700;
+      }
+
+      .term-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+      }
+
+      .term {
+        min-height: 31mm;
+        padding: 5mm;
+        border: 1px solid var(--line);
+        border-radius: 5mm;
+        background: #ffffff;
+        break-inside: avoid;
+      }
+
+      .term p {
+        margin: 2mm 0 0;
+        font-size: 9.4pt;
+      }
+
+      .callout {
+        margin-top: 8mm;
+        padding: 6mm;
+        border: 1px solid var(--line);
+        border-radius: 5mm;
+        background: #f6faf6;
+      }
+
+      .footer {
+        position: absolute;
+        right: 18mm;
+        bottom: 11mm;
+        left: 18mm;
+        display: flex;
+        justify-content: space-between;
+        color: #7b879a;
+        font-size: 8.5pt;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <header>
+        <span class="brand-title">Nuts &amp; Bolts</span>
+        <span class="brand-subtitle">Investing</span>
+      </header>
+      <main>
+        <p class="eyebrow">Free plain-English guide</p>
+        <h1>Beginner Investing Glossary</h1>
+        <p>
+          A calm, jargon-free guide to the investing words beginners are most likely to meet.
+        </p>
+      </main>
+      <aside class="intro">
+        <p>
+          Use this glossary when a term stops you mid-sentence. The goal is not to memorise every
+          word, but to make investing language feel less intimidating.
+        </p>
+        <p>Educational content only. This is not financial advice.</p>
+      </aside>
+    </section>
+  </body>
+</html>
