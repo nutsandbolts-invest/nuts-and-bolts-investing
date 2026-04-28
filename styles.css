@@ -674,6 +674,10 @@ a {
   padding-top: 2rem;
 }
 
+.signup-benefits {
+  margin-top: 1.2rem;
+}
+
 .signup-grid {
   padding: 2rem;
   border: 1px solid rgba(144, 212, 171, 0.24);
