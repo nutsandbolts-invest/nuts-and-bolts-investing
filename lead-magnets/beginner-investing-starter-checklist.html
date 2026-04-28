@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Investing Starter Checklist | Nuts &amp; Bolts Investing</title>
+    <style>
+      :root {
+        --navy: #20274d;
+        --navy-soft: #293260;
+        --mint: #8ecda8;
+        --mint-deep: #6fb28b;
+        --ivory: #f4eddc;
+        --text: #17213b;
+        --muted: #516078;
+        --line: #d9e5dc;
+        --paper: #fffdf7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        background: #e9edf4;
+        color: var(--text);
+        font-family: "Avenir Next", Montserrat, "Segoe UI", Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      .page {
+        position: relative;
+        min-height: 297mm;
+        padding: 18mm;
+        background: var(--paper);
+        overflow: hidden;
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .cover {
+        display: grid;
+        align-content: space-between;
+        background:
+          radial-gradient(circle at 88% 16%, rgba(142, 205, 168, 0.22), transparent 38mm),
+          linear-gradient(160deg, #242b53 0%, #1f274e 100%);
+        color: var(--ivory);
+      }
+
+      .cover::before,
+      .cover::after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(142, 205, 168, 0.2);
+        transform: rotate(16deg);
+      }
+
+      .cover::before {
+        width: 86mm;
+        height: 86mm;
+        right: -20mm;
+        top: 34mm;
+        border-radius: 28%;
+      }
+
+      .cover::after {
+        width: 48mm;
+        height: 48mm;
+        left: -12mm;
+        bottom: 30mm;
+        border-radius: 30%;
+      }
+
+      .brand {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 2mm;
+        width: max-content;
+      }
+
+      .brand-title {
+        color: var(--ivory);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 24pt;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+
+      .brand-subtitle {
+        color: var(--mint);
+        font-size: 8pt;
+        font-weight: 800;
+        letter-spacing: 0.36em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        margin: 0 0 5mm;
+        color: var(--mint-deep);
+        font-size: 8pt;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .cover .eyebrow {
+        color: var(--mint);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        max-width: 150mm;
+        font-size: 44pt;
+      }
+
+      h2 {
+        color: var(--navy);
+        font-size: 25pt;
+      }
+
+      h3 {
+        color: var(--navy);
+        font-size: 14pt;
+      }
+
+      .lede {
+        max-width: 145mm;
+        margin: 8mm 0 0;
+        color: rgba(244, 237, 220, 0.86);
+        font-size: 14pt;
+      }
+
+      .cover-note {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 5mm;
+        max-width: 132mm;
+        padding: 7mm;
+        border: 1px solid rgba(142, 205, 168, 0.34);
+        border-radius: 6mm;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .cover-note p {
+        margin: 0;
+        color: rgba(244, 237, 220, 0.86);
+      }
+
+      .content-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 10mm;
+        margin-bottom: 10mm;
+        padding-bottom: 7mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .mini-brand {
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 13pt;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .intro-box,
+      .callout,
+      .next-step {
+        border: 1px solid var(--line);
+        border-radius: 5mm;
+        background: #f6faf6;
+      }
+
+      .intro-box {
+        padding: 7mm;
+        margin: 8mm 0 9mm;
+      }
+
+      .intro-box p,
+      .callout p,
+      .next-step p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .section-grid {
+        display: grid;
+        gap: 6mm;
+      }
+
+      .check-card {
+        display: grid;
+        grid-template-columns: 8mm 1fr;
+        gap: 4mm;
+        padding: 5mm;
+        border: 1px solid var(--line);
+        border-radius: 5mm;
+        background: #ffffff;
+        break-inside: avoid;
+      }
+
+      .box {
+        width: 6mm;
+        height: 6mm;
+        margin-top: 1mm;
+        border: 1.6pt solid var(--mint-deep);
+        border-radius: 1.5mm;
+      }
+
+      .check-card p {
+        margin: 2mm 0 0;
+        color: var(--muted);
+        font-size: 10pt;
+      }
+
+      .small-note {
+        margin-top: 2.5mm;
+        color: var(--muted);
+        font-size: 9pt;
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6mm;
+      }
+
+      .term-card,
+      .plan-card {
+        padding: 5mm;
+        border: 1px solid var(--line);
+        border-radius: 5mm;
+        background: #ffffff;
+        break-inside: avoid;
+      }
+
+      .term-card h3,
+      .plan-card h3 {
+        margin-bottom: 2mm;
+        font-size: 12.5pt;
+      }
+
+      .term-card p,
+      .plan-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 9.7pt;
+      }
+
+      .callout {
+        margin: 8mm 0;
+        padding: 6mm;
+      }
+
+      .callout strong,
+      .next-step strong {
+        color: var(--navy);
+      }
+
+      .write-lines {
+        display: grid;
+        gap: 6mm;
+        margin-top: 5mm;
+      }
+
+      .line {
+        height: 9mm;
+        border-bottom: 1px solid #cad8d0;
+      }
+
+      .next-step {
+        padding: 6mm;
+      }
+
+      .footer {
+        position: absolute;
+        right: 18mm;
+        bottom: 11mm;
+        left: 18mm;
+        display: flex;
+        justify-content: space-between;
+        gap: 8mm;
+        color: #7b879a;
+        font-size: 8.5pt;
+      }
+
+      .disclaimer {
+        max-width: 126mm;
+      }
+
+      .page-number {
+        color: var(--navy);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <div class="brand">
+        <span class="brand-title">Nuts &amp; Bolts</span>
+        <span class="brand-subtitle">Investing</span>
+      </div>
+
+      <main>
+        <p class="eyebrow">Free practical guide</p>
+        <h1>Beginner Investing Starter Checklist</h1>
+        <p class="lede">
+          A calm, practical starting guide for people who want to understand the stock market
+          without hype, pressure, or jargon.
+        </p>
+      </main>
+
+      <aside class="cover-note">
+        <p>
+          Use this checklist before you invest your first pound, choose an account, or start
+          comparing funds and shares. It is designed to help you slow down, understand the basics,
+          and make your next step more deliberate.
+        </p>
+        <p>
+          Educational content only. This is not financial advice.
+        </p>
+      </aside>
+    </section>
+
+    <section class="page">
+      <header class="content-header">
+        <div>
+          <p class="eyebrow">Step 1</p>
+          <h2>Get Your Starting Point Clear</h2>
+        </div>
+        <div class="mini-brand">Nuts &amp; Bolts Investing</div>
+      </header>
+
+      <div class="intro-box">
+        <p>
+          Investing is easier to understand when you separate the learning process from the pressure
+          to act immediately. Start by checking whether the foundations around your money are ready.
+        </p>
+      </div>
+
+      <div class="section-grid">
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I know why I want to invest.</h3>
+            <p>
+              Write down the reason in plain English: long-term wealth, retirement, a future house
+              deposit, children's savings, or simply learning how markets work.
+            </p>
+          </div>
+        </article>
+
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I have handled short-term essentials first.</h3>
+            <p>
+              Before investing, check your everyday budget, emergency savings, and high-interest
+              debt. Investing works best when it is not being used to rescue short-term pressure.
+            </p>
+          </div>
+        </article>
+
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I have chosen a realistic time frame.</h3>
+            <p>
+              Stock market investing is usually better suited to money you can leave alone for
+              several years. If you need the money soon, risk matters more.
+            </p>
+          </div>
+        </article>
+
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I understand that investments can fall as well as rise.</h3>
+            <p>
+              A calm investor expects ups and downs. The goal is not to avoid every wobble, but to
+              understand what you own and why you own it.
+            </p>
+          </div>
+        </article>
+
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I know how much I can afford to start with.</h3>
+            <p>
+              Your first amount does not need to be impressive. A small, sustainable starting point
+              is better than an amount that makes you anxious.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <footer class="footer">
+        <span class="disclaimer">Educational content only. This checklist is not financial advice.</span>
+        <span class="page-number">01</span>
+      </footer>
+    </section>
+
+    <section class="page">
+      <header class="content-header">
+        <div>
+          <p class="eyebrow">Step 2</p>
+          <h2>Learn the Basic Building Blocks</h2>
+        </div>
+        <div class="mini-brand">Nuts &amp; Bolts Investing</div>
+      </header>
+
+      <div class="two-column">
+        <article class="term-card">
+          <h3>Share</h3>
+          <p>A small piece of ownership in a company. If the company does well, the share may rise. If it struggles, the share may fall.</p>
+        </article>
+        <article class="term-card">
+          <h3>Fund</h3>
+          <p>A basket of investments managed together. Funds can help beginners avoid relying on one single company.</p>
+        </article>
+        <article class="term-card">
+          <h3>Index</h3>
+          <p>A list that tracks a market or section of a market, such as large UK or US companies.</p>
+        </article>
+        <article class="term-card">
+          <h3>Diversification</h3>
+          <p>Spreading money across different investments so one poor result does not carry everything.</p>
+        </article>
+        <article class="term-card">
+          <h3>Fees</h3>
+          <p>The costs charged by platforms, funds, or products. Small fees can matter over long periods.</p>
+        </article>
+        <article class="term-card">
+          <h3>Risk</h3>
+          <p>The chance that results are different from what you hoped for, including the possibility of losing money.</p>
+        </article>
+      </div>
+
+      <div class="callout">
+        <p>
+          <strong>Beginner rule of thumb:</strong> if you cannot explain what an investment is, how it
+          makes money, what it costs, and what could go wrong, pause before buying it.
+        </p>
+      </div>
+
+      <div class="section-grid">
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I can explain the difference between a share and a fund.</h3>
+            <p>This helps you understand whether you are buying one company or a wider basket.</p>
+          </div>
+        </article>
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I know that low cost does not automatically mean low risk.</h3>
+            <p>A cheap investment can still fall in value. Fees matter, but they are only one part of the decision.</p>
+          </div>
+        </article>
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I have written down three words I need to understand better.</h3>
+            <p>Use confusion as a map. The words you pause on are often the best place to start learning.</p>
+          </div>
+        </article>
+      </div>
+
+      <footer class="footer">
+        <span class="disclaimer">Educational content only. This checklist is not financial advice.</span>
+        <span class="page-number">02</span>
+      </footer>
+    </section>
+
+    <section class="page">
+      <header class="content-header">
+        <div>
+          <p class="eyebrow">Step 3</p>
+          <h2>Choose Your First Sensible Action</h2>
+        </div>
+        <div class="mini-brand">Nuts &amp; Bolts Investing</div>
+      </header>
+
+      <div class="section-grid">
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I have researched which type of account may suit me.</h3>
+            <p>
+              In the UK, beginners often hear about Stocks and Shares ISAs, SIPPs, and General
+              Investment Accounts. Each has different tax treatment, access rules, and uses.
+            </p>
+          </div>
+        </article>
+
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I have checked platform costs and features.</h3>
+            <p>
+              Look at account fees, fund fees, dealing costs, regular investing options, minimum
+              deposits, and how easy the platform is to understand.
+            </p>
+          </div>
+        </article>
+
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I have avoided rushing because of online hype.</h3>
+            <p>
+              A trending investment is not automatically a good beginner investment. Slow decisions
+              are often better decisions.
+            </p>
+          </div>
+        </article>
+
+        <article class="check-card">
+          <span class="box"></span>
+          <div>
+            <h3>I have decided how I will keep learning.</h3>
+            <p>
+              Choose one trusted learning path. Jumping between random videos, hot takes, and social
+              media threads can make simple topics feel much harder.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout">
+        <p>
+          <strong>Red flag check:</strong> be careful with anything promising guaranteed returns,
+          urgent action, secret methods, or profits with little risk.
+        </p>
+      </div>
+
+      <h2>Your Simple Starter Plan</h2>
+      <p class="small-note">Use these prompts to turn the checklist into a practical next step.</p>
+
+      <div class="write-lines">
+        <div>
+          <h3>My main reason for investing is:</h3>
+          <div class="line"></div>
+        </div>
+        <div>
+          <h3>The first topic I need to understand better is:</h3>
+          <div class="line"></div>
+        </div>
+        <div>
+          <h3>My next calm action is:</h3>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span class="disclaimer">Educational content only. This checklist is not financial advice.</span>
+        <span class="page-number">03</span>
+      </footer>
+    </section>
+
+    <section class="page">
+      <header class="content-header">
+        <div>
+          <p class="eyebrow">Keep going</p>
+          <h2>What To Do After This Checklist</h2>
+        </div>
+        <div class="mini-brand">Nuts &amp; Bolts Investing</div>
+      </header>
+
+      <div class="two-column">
+        <article class="plan-card">
+          <h3>1. Build your vocabulary</h3>
+          <p>Pick one investing term per day and learn it well enough to explain it to someone else.</p>
+        </article>
+        <article class="plan-card">
+          <h3>2. Understand accounts first</h3>
+          <p>Before comparing investments, understand the account or wrapper you may hold them inside.</p>
+        </article>
+        <article class="plan-card">
+          <h3>3. Compare slowly</h3>
+          <p>Do not compare only past performance. Also look at risk, fees, diversification, and time frame.</p>
+        </article>
+        <article class="plan-card">
+          <h3>4. Write down your rules</h3>
+          <p>Decide what you will avoid, how much you can afford, and when you will review your plan.</p>
+        </article>
+      </div>
+
+      <div class="next-step" style="margin-top: 10mm;">
+        <h3>Your next learning step</h3>
+        <p>
+          If you want a structured beginner path, the Nuts &amp; Bolts Investing course is designed to
+          explain the basics calmly, practically, and in plain English.
+        </p>
+      </div>
+
+      <div class="callout">
+        <p>
+          <strong>Remember:</strong> the goal at the beginning is not to sound clever. The goal is to
+          understand enough to make calm, informed decisions and avoid being pushed around by hype.
+        </p>
+      </div>
+
+      <div class="intro-box">
+        <h3>Important note</h3>
+        <p>
+          This guide is for education only and does not take into account your personal circumstances.
+          Investing involves risk, and the value of investments can go down as well as up. Consider
+          speaking to a qualified financial adviser if you need personal advice.
+        </p>
+      </div>
+
+      <footer class="footer">
+        <span class="disclaimer">nutsandboltsinvesting.com</span>
+        <span class="page-number">04</span>
+      </footer>
+    </section>
+  </body>
+</html>

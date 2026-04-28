@@ -664,6 +664,105 @@ a {
   font-size: 0.92rem;
 }
 
+.contact-layout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+}
+
+.contact-card {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-direct {
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+}
+
+.contact-list {
+  margin-top: auto;
+  padding-top: 1.6rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.05rem;
+}
+
+.form-heading {
+  margin-bottom: 0.25rem;
+}
+
+.form-heading h2 {
+  margin: 0 0 0.55rem;
+  color: var(--ivory);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.form-heading p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-field label {
+  color: var(--ivory);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(144, 212, 171, 0.28);
+  border-radius: 0.95rem;
+  background: rgba(10, 18, 36, 0.34);
+  color: var(--text);
+  font: inherit;
+  padding: 0.95rem 1rem;
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.form-field textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(188, 197, 215, 0.62);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--mint);
+  background: rgba(10, 18, 36, 0.48);
+  box-shadow: 0 0 0 4px rgba(142, 205, 168, 0.12);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .text-link {
   color: var(--mint);
   font-weight: 600;
