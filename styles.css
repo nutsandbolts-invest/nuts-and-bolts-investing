@@ -645,6 +645,31 @@ a {
   margin-top: 0;
 }
 
+.legal-copy {
+  max-width: 860px;
+}
+
+.legal-copy h2 {
+  margin: 2rem 0 0.75rem;
+  color: var(--ivory);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.legal-copy ul {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0 0 1.35rem;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.legal-copy li::marker {
+  color: var(--mint);
+}
+
 .signup-section {
   padding-top: 2rem;
 }
