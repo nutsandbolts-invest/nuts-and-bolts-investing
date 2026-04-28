@@ -200,7 +200,7 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 10ch;
+  max-width: 12ch;
 }
 
 .eyebrow,
@@ -429,6 +429,12 @@ a {
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
 }
 
+.hero-offer-card {
+  background:
+    radial-gradient(circle at top right, rgba(142, 205, 168, 0.18), transparent 14rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.03));
+}
+
 .offer-intro {
   max-width: 34rem;
 }
@@ -445,6 +451,11 @@ a {
   border: 1px solid rgba(144, 212, 171, 0.26);
   border-radius: 1.25rem;
   background: rgba(10, 18, 36, 0.32);
+}
+
+.hero-price-block {
+  margin-top: 1.2rem;
+  padding-top: 1.15rem;
 }
 
 .price-row {
@@ -502,6 +513,17 @@ a {
   font-size: 0.78rem;
 }
 
+.hero-launch-badge {
+  width: 5.8rem;
+  height: 5.8rem;
+  top: -2.15rem;
+  right: -0.75rem;
+}
+
+.hero-launch-badge span {
+  font-size: 0.67rem;
+}
+
 .launch-badge-side {
   top: -2.75rem;
   right: -1rem;
@@ -511,6 +533,10 @@ a {
   display: grid;
   gap: 0.72rem;
   margin-bottom: 1.6rem;
+}
+
+.hero-offer-list {
+  margin-top: 1.2rem;
 }
 
 .offer-side-card {
