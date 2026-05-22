@@ -200,7 +200,7 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 12ch;
+  max-width: 13ch;
 }
 
 .eyebrow,
@@ -256,6 +256,12 @@ a {
   border-color: var(--line);
   background: rgba(255, 255, 255, 0.03);
   color: var(--ivory);
+}
+
+.trust-note {
+  margin: 0.9rem 0 0;
+  color: rgba(236, 240, 246, 0.72);
+  font-size: 0.92rem;
 }
 
 .hero-link {
@@ -346,6 +352,9 @@ a {
 
 .brand-plate-image {
   width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
   border-radius: calc(var(--radius) - 0.5rem);
 }
 
@@ -433,6 +442,45 @@ a {
   background:
     radial-gradient(circle at top right, rgba(142, 205, 168, 0.18), transparent 14rem),
     linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.03));
+}
+
+.checklist-card {
+  background:
+    radial-gradient(circle at top right, rgba(142, 205, 168, 0.18), transparent 14rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.03));
+}
+
+.checklist-preview {
+  display: grid;
+  gap: 0.25rem;
+  margin: 1.25rem 0 0.2rem;
+  padding: 1.1rem;
+  border: 1px solid rgba(144, 212, 171, 0.28);
+  border-radius: 1.1rem;
+  background: #fffdf7;
+  color: #17213b;
+  box-shadow: 0 18px 44px rgba(5, 10, 24, 0.18);
+}
+
+.checklist-preview span {
+  width: 3.5rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--mint);
+}
+
+.checklist-preview strong {
+  color: #17213b;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.checklist-preview small {
+  color: #516078;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .offer-intro {
@@ -572,6 +620,25 @@ a {
   position: relative;
 }
 
+.ivory-section {
+  background: #fffdf7;
+  color: #17213b;
+}
+
+.ivory-section .eyebrow,
+.ivory-section .card-kicker {
+  color: #547f66;
+}
+
+.ivory-section h2,
+.ivory-section h3 {
+  color: #20274d;
+}
+
+.ivory-section p {
+  color: #516078;
+}
+
 .section-muted::before {
   content: "";
   position: absolute;
@@ -609,8 +676,83 @@ a {
 .steps-grid,
 .faq-grid,
 .values-grid,
-.resource-grid {
+.resource-grid,
+.preview-grid,
+.category-grid,
+.article-grid,
+.curriculum-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.preview-grid,
+.category-grid,
+.article-grid,
+.curriculum-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.preview-card,
+.category-card,
+.article-card,
+.curriculum-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(84, 127, 102, 0.22);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.preview-card h3,
+.category-card h3,
+.article-card h3,
+.curriculum-card h3 {
+  margin: 0 0 0.7rem;
+}
+
+.course-hero-grid,
+.start-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.55fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.course-buy-card,
+.social-signup-card {
+  position: sticky;
+  top: 6.5rem;
+}
+
+.course-meta {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.2rem 0;
+  color: var(--muted);
+}
+
+.course-meta span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(144, 212, 171, 0.28);
+  border-radius: 999px;
+  background: rgba(10, 18, 36, 0.24);
+}
+
+.not-for-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.not-for-list li {
+  padding: 1rem;
+  border: 1px solid rgba(144, 212, 171, 0.18);
+  border-radius: 1rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .feature-layout {
@@ -832,6 +974,32 @@ a {
   font-size: 0.92rem;
 }
 
+.mobile-sticky-cta {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 30;
+  display: none;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: var(--mint);
+  color: #13263b;
+  font-weight: 800;
+  box-shadow: 0 14px 36px rgba(5, 10, 24, 0.32);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.8rem);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.mobile-sticky-cta.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 @media (max-width: 960px) {
   .nav-toggle {
     display: inline-flex;
@@ -868,8 +1036,19 @@ a {
   .steps-grid,
   .faq-grid,
   .values-grid,
-  .resource-grid {
+  .resource-grid,
+  .preview-grid,
+  .category-grid,
+  .article-grid,
+  .curriculum-grid,
+  .course-hero-grid,
+  .start-hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .course-buy-card,
+  .social-signup-card {
+    position: static;
   }
 
   .footer-links {
@@ -884,6 +1063,14 @@ a {
   .launch-badge {
     right: 0.75rem;
   }
+
+  .course-buy-card .launch-badge {
+    position: static;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-bottom: 1rem;
+    transform: none;
+  }
 }
 
 @media (max-width: 720px) {
@@ -893,7 +1080,7 @@ a {
 
   .hero-copy h1,
   .page-hero h1 {
-    font-size: clamp(2.6rem, 12vw, 4rem);
+    font-size: clamp(2.45rem, 10.5vw, 3.65rem);
   }
 
   .brand {
@@ -904,5 +1091,9 @@ a {
   .large-card,
   .signup-grid {
     padding: 1.4rem;
+  }
+
+  .mobile-sticky-cta {
+    display: inline-flex;
   }
 }
