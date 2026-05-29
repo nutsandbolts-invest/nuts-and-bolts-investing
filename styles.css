@@ -512,6 +512,14 @@ a {
   gap: 0.85rem;
 }
 
+.price-note {
+  flex-basis: 100%;
+  max-width: 34rem;
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
 .price-value,
 .course-price {
   margin: 0;
@@ -520,16 +528,6 @@ a {
   font-size: clamp(2.8rem, 5vw, 4.25rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
-}
-
-.price-was {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: line-through;
-  text-decoration-thickness: 2px;
-  text-decoration-color: rgba(255, 255, 255, 0.85);
 }
 
 .launch-badge {
